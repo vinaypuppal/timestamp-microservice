@@ -14,7 +14,7 @@ var router = require('./router');
 app.use(morgan('combined'));
 
 //static files
-app.use("/public",express.static(path.join(__dirname,'/public')));
+app.use(express.static(path.join(__dirname,'/public')));
 
 //routes
 router(app);
