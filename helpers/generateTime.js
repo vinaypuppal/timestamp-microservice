@@ -3,7 +3,7 @@ var moment = require('moment');
 module.exports = function(timestamp){
 	if(moment.unix(timestamp).isValid()){
 		return{
-			unix:timestamp,
+			unix:parseInt(timestamp),
 			natural:moment.unix(timestamp).format('MMMM DD, YYYY')
 		}
 	}else if(moment(timestamp).isValid()){
