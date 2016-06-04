@@ -4,11 +4,20 @@ var express = require('express');
 var http = require('http');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
+var path = require('path');
 
 var app = express();
 
-//App setup
+var router = require('./router');
 
+//App setup
+app.use(morgan('combined'));
+
+//static files
+app.use("/public",express.static(path.join(__dirname,'/public')));
+
+//routes
+router(app);
 
 //Server setup
 var port = process.env.PORT || 3000;
