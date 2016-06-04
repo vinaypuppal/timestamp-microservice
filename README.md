@@ -27,3 +27,20 @@
 ##### UI:
 
 ![timestamp-micoservice-ui](https://res.cloudinary.com/vinaypuppal/image/upload/c_scale,w_1024/v1465061495/fcc/timestamp-ui.png)
+
+#### How To Run This App Locally
+
+Clone This Repoistory
+```bash
+git clone https://github.com/vinaypuppal/timestamp-microservice.git
+```
+
+```bash
+cd <cloned directory>
+```
+
+Install dependencies and start server
+```bash
+npm install
+npm run dev
+```
